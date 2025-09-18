@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Excel to VCF Converter</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo">
+          <div class="logo-icon">
+            <i class="fas fa-file-excel"></i>
+          </div>
+          <div class="logo-text">Excel2VCF</div>
+        </div>
+      </header>
+
+      <div class="content">
+        <div class="upload-section">
+          <div class="upload-card">
+            <div class="upload-icon">
+              <i class="fas fa-cloud-upload-alt"></i>
+            </div>
+            <h2>Upload Your Excel File</h2>
+
+            <input
+              type="file"
+              id="file-input"
+              class="file-input"
+              accept=".xlsx, .xls, .ods, .csv, .txt"
+            />
+            <button
+              class="upload-btn"
+              onclick="document.getElementById('file-input').click()"
+            >
+              <i class="fas fa-file-excel"></i> Choose File
+            </button>
+
+            <div class="status info" id="status">
+              Col A = Name , Col B = Number
+            </div>
+
+            <div class="feature">
+              <i class="fas fa-shield-alt"></i>
+              <h4>100% Secure & Fast Conversion</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="preview-section">
+          <div class="preview-card">
+            <div class="preview-header">
+              <h3><i class="fas fa-table"></i> Data Preview</h3>
+              <div class="counter" id="counter">0 contacts</div>
+            </div>
+
+            <div class="table-container" id="table-container">
+              <div class="empty-state">
+                <i class="fas fa-inbox"></i><br />
+                Upload an Excel file to preview your data
+              </div>
+            </div>
+
+            <button class="download-btn" id="download-btn" disabled>
+              <i class="fas fa-download"></i> Download VCF File
+            </button>
+          </div>
+        </div>
+      </div>
+      <footer
+        style="
+          text-align: center;
+          padding: 20px;
+          margin-top: 40px;
+          color: #666;
+          font-size: 14px;
+          border-top: 1px solid #eaeaea;
+        "
+      >
+        <p>
+          2025 &copy; Powered by
+          <a
+            href="https://getsite.today"
+            target="_blank"
+            style="color: #4361ee; text-decoration: none; font-weight: 500"
+            >Getsite.Today</a
+          >
+        </p>
+      </footer>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
